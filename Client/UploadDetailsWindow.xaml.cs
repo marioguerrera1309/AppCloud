@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+
 namespace CloudFG
 {
     public partial class UploadDetailsWindow : Window
@@ -10,12 +11,13 @@ namespace CloudFG
         }
         private void BtnConfirmClick(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(title.Text)) {
+            if (string.IsNullOrWhiteSpace(title.Text))
+            {
                 MessageBox.Show("Inserisci un titolo valido!", "Attenzione");
                 return;
             }
             DocumentTitle = title.Text;
-            this.DialogResult = true;// Chiude la finestra e conferma l'operazione
+            this.DialogResult = true;
         }
     }
 }
