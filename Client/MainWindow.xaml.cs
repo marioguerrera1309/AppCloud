@@ -108,7 +108,7 @@ namespace CloudFG
             last = searchWin;
         }
 
-        private void WindowClosed(object sender, EventArgs e)
+        private void WindowClosed(object? sender, EventArgs e)
         {
             Application.Current.Shutdown();
         }

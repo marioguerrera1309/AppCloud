@@ -6,7 +6,7 @@ namespace CloudFG
     public class Analitics
     {
         [JsonPropertyName("hash")]
-        public string Hash { get; set; }
+        public string Hash { get; set; } = string.Empty;
         [JsonPropertyName("gulpease_index")]
         public float GulpeaseIndex { get; set; }
         [JsonPropertyName("letters")]
