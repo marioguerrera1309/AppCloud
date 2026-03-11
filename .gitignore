@@ -1,0 +1,5 @@
+Server/uploads/
+Client/bin/
+Client/obj/
+Server/CloudFG.db
+Server/server.exe

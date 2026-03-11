@@ -1,0 +1,41 @@
+﻿<Window x:Class="CloudFG.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CloudFG" Height="500" Width="800"
+        Icon="CloudFGIcon.ico"
+        Closed="WindowClosed">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,20">
+            <TextBlock Name="lblWelcome" Text="Benvenuto!" VerticalAlignment="Center" 
+                       FontSize="14" FontWeight="SemiBold" Foreground="#333" Margin="0,0,10,0"/>
+            <Button Content="Visualizza i tuoi documenti" Click="BtnAllClick" Width="150" Height="25" Margin="0,0,5,0" 
+                    Background="#F5F5F5" Cursor="Hand"/>
+            <Button Content="Esci" Click="BtnLogoutClick" Width="60" Height="25" Margin="0,0,5,0" 
+                    Background="#F5F5F5" Cursor="Hand"/>
+             <Button Content="Elimina account" Click="BtnDeleteAccountClick" Width="100" Height="25" Margin="0,0,0,0"
+                    Background="#F5F5F5" Cursor="Hand"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <TextBlock Name="lblTextSearch" Text="Ricerca documento" Margin="0,0,0,5" FontWeight="Medium"/>
+            <TextBox Name="lblSearch" Height="35" VerticalContentAlignment="Center" Padding="8,0" 
+                     Text="Inserisci un titolo" Foreground="Gray" GotFocus="RemoveText"/>
+            <Button Name="btnSearch" Content="Cerca documento" Click="BtnSearchClick" 
+                    Height="35" Margin="0,10,0,0" Background="#E1E1E1"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" VerticalAlignment="Center">
+            <TextBlock Name="lblFileName" Text="Nessun file selezionato" Margin="0,0,0,10" 
+                       TextTrimming="CharacterEllipsis" HorizontalAlignment="Center" Foreground="#666"/>
+            <Button Name="btnSend" Content="Seleziona e Invia File" Click="BtnSendClick" 
+                    Height="40" Margin="0,0,0,15" Width="300" FontWeight="Bold"/>
+            <ProgressBar Name="uploadProgressBar" Height="15" Minimum="0" Maximum="100" 
+                         Margin="0,0,0,10" Visibility="Hidden" Width="300"/>
+            <TextBlock Name="lblStatus" Text="Pronto" Foreground="Gray" 
+                       HorizontalAlignment="Center" FontSize="12"/>
+        </StackPanel>
+    </Grid>
+</Window>

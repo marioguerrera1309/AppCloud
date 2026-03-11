@@ -1,0 +1,16 @@
+﻿<Window x:Class="CloudFG.UploadDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CloudFG"
+        mc:Ignorable="d"
+        Title="Dettagli documento" Height="450" Width="800"
+        ResizeMode="NoResize"
+        Icon="CloudFGIcon.ico">
+    <StackPanel Margin="15">
+        <TextBlock Text="Titolo:"/>
+        <TextBox Name="title" Margin="0,5,0,10"/>
+        <Button Content="Conferma" Click="BtnConfirmClick" IsDefault="True" Height="30"/>
+    </StackPanel>
+</Window>
